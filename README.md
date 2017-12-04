@@ -1,6 +1,8 @@
 # Investment System
 
-This project is in Angular 4 - system of purchases of currency exchange.
+This project is in Angular 4 - system of purchases of currency exchange. 
+
+To view -> https://new-investiments.herokuapp.com/#/
 
 ## Development server
 
