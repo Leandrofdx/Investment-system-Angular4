@@ -1,6 +1,6 @@
 # Investment System
 
-This project in Angular 4 - system of purchases of currency exchange.
+This project is in Angular 4 - system of purchases of currency exchange.
 
 ## Development server
 
