@@ -1,0 +1,221 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+body {
+  background: #171719;
+}
+
+span.ng-star-inserted {
+  color: #dc3545;
+}
+
+.quantity {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.value-button {
+    display: inline-block;
+    border: 1px solid #007bff;
+    margin: 0px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.value-button:hover {
+  cursor: pointer;
+}
+
+
+.quantity #decrease {
+  border-radius: 8px 0 0 8px;
+}
+
+.quantity #increase {
+  border-radius: 0 8px 8px 0;
+}
+
+
+.quantity #input-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+
+#quantity-number {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 25px;
+  background: #fff;
+  vertical-align: middle;
+}
+
+.progress {
+  height: 2px;
+}
+
+.public-user-block.block{
+  margin-bottom: 7%;
+  
+}
+
+.public-user-block .contributions {
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  padding: 0;
+}
+
+.public-user-block .contributions a {
+  color: #fff;
+  padding: 6px 30px;
+}
+
+.clear {
+  display: flex;
+  justify-content: flex-end;
+  
+}
+.clear a,
+a.btn.btn-sm.danger {
+  color: #007bff;
+  cursor: pointer;
+  border: 1px solid #007bff;
+}
+
+.clear a {
+    padding: 10px 15px;
+}
+
+app-finalize-investment {
+  width: 100%;
+}
+
+ .stats-2-block.block.d-flex.x {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+ }
+
+  .stats-2-block.block.d-flex.x .stats-2.d-flex {
+    justify-content: space-around;
+    width: 100%; 
+  }
+
+.add, .add a {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+   
+}
+
+.add .fa{
+  padding-right: 10px;
+  color: #007bff;
+}
+
+
+
+.stats-with-chart-2 .title,
+.stats-with-chart-2 .chart,
+.public-user-block.block {
+  margin-bottom: 0;
+}
+.container-fluid {
+  padding: 0;
+}
+
+.total {
+  height: 174px;
+  font-size: 22px;
+  font-weight: bold;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background: url('./assets/img/circule.png') center center no-repeat;
+}
+.total p {
+  margin: 0;
+}
+
+.public-user-block .contributions {
+  background: none;
+}
+
+.public-user-block .contributions a {
+    color: #fff;
+    padding: 6px 30px;
+    color: #007bff;
+    border: 1px solid #007bff; 
+  }
+
+  .title.x {
+    text-align: center;
+  }
+
+  .finalize {
+    display: flex; flex-wrap: wrap; margin-top: 20px;
+  }
+
+  .stats-with-chart-2.block.margin {
+    margin-bottom: 0;
+  }
+
+  .has-error input {
+  border-color: #DB6574;
+}
+
+.has-success input {
+  border-color: #007bff;
+}
+input.input-material:focus {
+ border-color: #ccc; 
+}
+
+.checkbox-template:checked::before, .radio-template:checked::before {
+  background: #007bff;
+}
+
+app-summary {
+  font-size: 18px;
+  background: url('./assets/img/investment.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+    /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  app-summary {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}

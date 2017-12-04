@@ -1,0 +1,71 @@
+<div class="page-header no-margin-bottom" [@triggerFinalize]="FinalizeState">
+	<div class="container-fluid">
+		<h2 class="h5 no-margin-bottom">Effective Purchase / <a [routerLink]="['/']">Back</a></h2>
+	</div>
+	<br>
+</div>
+
+<form class="col-lg-12" class="finalize" [formGroup]="coinForm" novalidate>
+
+	<div class="col-lg-6">
+		<div class="block">
+
+			<app-input-container errorMessage="Name Invalid" label="Nome">
+				<input class="input-material" formControlName="name" placeholder="Nome" autocomplete="off" >
+			</app-input-container>
+
+			<app-input-container errorMessage="E-mail Invalid" label="E-mail" >
+				<input type="text" class="input-material" formControlName="email" placeholder="E-mail" autocomplete="off">
+			</app-input-container>
+
+			<app-input-container errorMessage="E-mails do not match" label="E-mail confirmation" 
+			[emailsNotMatch]="coinForm.hasError('emailsNotMatch')">
+			<input type="text" class="input-material" formControlName="emailConfirmation" placeholder="Confirmação do e-mail" autocomplete="off">
+			</app-input-container>
+
+		<div class="i-checks">
+			<input id="ticket" type="radio" value="ticket" formControlName="payment" name="payment" class="radio-template" >
+			<label for="ticket">Ticket</label>
+		</div>
+		<div class="i-checks">
+			<input id="card" type="radio" value="card" formControlName="payment" name="payment" class="radio-template" required="" checked="checked">
+			<label for="card">Credit card</label>
+		</div>
+
+		</div>
+	</div>
+	<div class="col-lg-6">
+		<div class="block">
+
+			<app-amount [coinsValue]="iconsValue()"></app-amount>
+
+			<div class="public-user-block block">
+				<div class="row d-flex align-items-center">                   
+					<div class="col-lg-12 text-center">
+
+						<div *ngIf="coinForm.valid && coinItems().length > 0" class="contributions" >
+							<a (click)="checkout(coinForm.value)">Effective Purchase</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-6">
+		<div class="block">
+
+			<app-finalize-item 
+			(click)="g.grafic()"
+			[coins]="coinItems()" 
+			(increaseQty)="increaseQty($event)"
+			(decreaseQty)="decreaseQty($event)"
+			(remove)="remove($event)">
+		</app-finalize-item>
+		</div>
+	</div>
+
+	<div class="col-lg-6 text-center">
+		<app-base-chart [coins]="coinItems()" #g></app-base-chart>
+	</div>
+</form>

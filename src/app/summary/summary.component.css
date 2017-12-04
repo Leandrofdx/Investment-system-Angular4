@@ -1,0 +1,24 @@
+.summary {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	font-size: 30px;
+	padding-top: 100px;
+	color: #ccc;
+}
+
+
+.snackbar {
+  min-width: 200px;
+  margin-left: -100px;
+  background-color: #2d3034;
+  color: #8a8d93;
+  border: 1px solid #007bff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}

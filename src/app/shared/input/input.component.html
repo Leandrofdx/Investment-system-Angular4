@@ -1,0 +1,10 @@
+  <div class="form-group-material" [class.has-success]="hasSuccess()" [class.has-error]="hasError()">
+  	<ng-content></ng-content>
+   
+    <!-- <label for="register-username" class="label-material">{{label}}</label> -->
+
+   <span *ngIf="input.invalid  &&  (input.dirty || input.touched )"><i class="fa fa-remove"></i> {{errorMessage}}</span>
+   <span *ngIf="(emailsNotMatch === true) && (input.valid)"><i class="fa fa-remove"></i> {{errorMessage}}</span>
+
+
+</div>

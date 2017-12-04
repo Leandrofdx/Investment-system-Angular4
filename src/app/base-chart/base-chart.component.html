@@ -1,0 +1,16 @@
+<div class="block">
+
+	<div style="display: block" *ngIf="coins.length > 0">
+		<canvas baseChart
+		[data]="doughnutChartData"
+		[colors]="doughnutChartColors"
+		[labels]="doughnutChartLabels"
+		[chartType]="doughnutChartType"
+		(chartHover)="chartHovered($event)"
+		(chartClick)="chartClicked($event)"></canvas>
+	</div>
+	<div *ngIf="!coins.length">
+		<p>Without Chart :c</p>
+	</div>
+</div>
+

@@ -1,0 +1,34 @@
+<div *ngIf="coins.length === 0">
+  <p>No coins in cart :( </p>
+</div>
+<table *ngIf="coins.length > 0" class="table">
+
+  <thead>
+    <tr>
+      <th>Qt</th>
+      <th>Currency</th>
+      <th>Value</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of coins">
+      <td>
+        <div class="quantity">
+          <span (click)="emitDecreaseQtd(item)" class="value-button" id="decrease" value="Decrease Value">-</span>
+          <span id="quantity-number">{{item.quantity}}</span>
+          <span (click)="emitIncreaseQtd(item)" class="value-button" id="increase" value="Increase Value">+</span>
+        </div> 
+      </td>
+      <td>{{item.coinItem.name}}</td>
+      <td>{{item.coinItem.buy  | currency: '$ ': 1}}</td>
+      <td>{{item.value() | currency: '$ ': 1}}</td>
+      
+      <td>
+        <a (click)="emitRemoveCoin(item)" class="btn btn-sm danger">
+          <i class="fa fa-remove"></i>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
